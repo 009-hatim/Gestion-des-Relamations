@@ -7,6 +7,7 @@ package services;
 
 import beans.EStatut;
 import beans.Etudiant;
+import beans.Reclamation;
 import beans.TraitementReclamation;
 import connexion.Connexion;
 import dao.IDao;
@@ -25,21 +26,24 @@ public class TraitementReclamationService implements IDao<TraitementReclamation>
     
     private Connexion connexion;
     private ReclamationService rcs;
+    private EtudiantService es;
 
     public TraitementReclamationService() {
         connexion = Connexion.getInstance();
         rcs = new ReclamationService();
+        es = new EtudiantService();
     }
     
 
     @Override
     public boolean create(TraitementReclamation o) {
-         String req = "insert into TraitementReclamation (statut, commentaire, reclamation_id) values (?, ?, ?)"; 
+         String req = "insert into TraitementReclamation (statut, commentaire, reclamation_id , etudiant_id) values (?, ?, ?,?)"; 
         try {
             PreparedStatement ps = connexion.getCn().prepareStatement(req);
             ps.setString(1, o.getStatut().toString());
             ps.setString(2, o.getCommentaire());
             ps.setInt(3, o.getReclamation().getId());
+            ps.setInt(4,o.getEtudiant().getId());
             ps.executeUpdate();
             return true;
         } catch (SQLException ex) {
@@ -50,10 +54,11 @@ public class TraitementReclamationService implements IDao<TraitementReclamation>
 
     @Override
     public boolean delete(TraitementReclamation o) {
-         String req = "delete from TraitementReclamation where reclamation_id = ?"; 
+         String req = "delete from TraitementReclamation where reclamation_id = ? AND etudiant_id = ?"; 
         try {
             PreparedStatement ps = connexion.getCn().prepareStatement(req);
             ps.setInt(1, o.getReclamation().getId());
+            ps.setInt(2, o.getEtudiant().getId());
             ps.executeUpdate();
             return true;
         } catch (SQLException ex) {
@@ -64,13 +69,14 @@ public class TraitementReclamationService implements IDao<TraitementReclamation>
 
     @Override
     public boolean update(TraitementReclamation o) {
-        String req = "update TraitementReclamation set statut = ?, commentaire = ?, reclamation_id  = ? where reclamation_id = ?"; 
+        String req = "update TraitementReclamation SET statut = ?, commentaire = ?, reclamation_id  = ? where reclamation_id = ? AND etudiant_id = ?"; 
         try {
             PreparedStatement ps = connexion.getCn().prepareStatement(req);
             ps.setString(1, o.getStatut().toString());
             ps.setString(2, o.getCommentaire());
             ps.setInt(3, o.getReclamation().getId());
             ps.setInt(4, o.getReclamation().getId());
+            ps.setInt(4, o.getEtudiant().getId());
             ps.executeUpdate();
             return true;
         } catch (SQLException ex) {
@@ -81,16 +87,7 @@ public class TraitementReclamationService implements IDao<TraitementReclamation>
 
     @Override
     public TraitementReclamation findById(int id) {
-         String req = "select * from TraitementReclamation where reclamation_id = ?"; 
-        try {
-            PreparedStatement ps = connexion.getCn().prepareStatement(req);
-            ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery();
-            if (rs.next())
-                return new TraitementReclamation(EStatut.valueOf(rs.getString("statut")), rs.getString("commentaire"),rcs.findById(rs.getInt("reclamation_id")));
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
+        
         return null;
                 
     }
@@ -102,9 +99,11 @@ public class TraitementReclamationService implements IDao<TraitementReclamation>
         try {
             PreparedStatement ps = connexion.getCn().prepareStatement(req);
             ResultSet rs = ps.executeQuery();
-            while (rs.next())
-                traitements.add(new TraitementReclamation(EStatut.valueOf(rs.getString("statut")), rs.getString("commentaire"),rcs.findById(rs.getInt("reclamation_id"))));
-            } catch (SQLException ex) {
+            while (rs.next()){
+                Reclamation reclamation = rcs.findById(rs.getInt("reclamation_id"));
+                Etudiant etudiant = es.findById(rs.getInt("etudiant_id"));
+                traitements.add(new TraitementReclamation(EStatut.valueOf(rs.getString("statut").toUpperCase()), rs.getString("commentaire"),reclamation, etudiant));
+            }} catch (SQLException ex) {
             System.out.println(ex.getMessage());
             }
         return traitements;

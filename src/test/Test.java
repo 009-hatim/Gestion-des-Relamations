@@ -25,20 +25,16 @@ public class Test {
         ReclamationService rs = new ReclamationService();
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         TraitementReclamationService ts = new TraitementReclamationService();
-        /*
-        ts.create(new TraitementReclamation(EStatut.traitée, "####", rs.findById(2)));
-        ts.create(new TraitementReclamation(EStatut.non_traitée, "////", rs.findById(5)));
+        
+        ts.create(new TraitementReclamation(EStatut.TRAITEE, "####", rs.findById(2),es.findById(1)));
+        ts.create(new TraitementReclamation(EStatut.NON_TRAITEE, "////", rs.findById(5),es.findById(3)));
                
-        ts.delete(ts.findById(5));
+        TraitementReclamation tr = ts.findAll().get(1);
+        ts.delete(tr);
+
         
-        TraitementReclamation t = ts.findById(5);
-        
-        t.setStatut(EStatut.non_traitée);
-        t.setCommentaire("@@@@");
-        t.setReclamation(rs.findById(5));
-        ts.update(t);
-        */ 
-        
+      
+                
         /*
         es.create(new Etudiant("Koubri", "Hatim", "H.koubri@gmail.com"));
         es.create(new Etudiant("Layhi", "Rayan", "R.Layhi@gmail.com"));
@@ -64,7 +60,18 @@ public class Test {
         rs.update(r);
         
         */
-        
+        System.out.println("Etudiant : ");
+        for(Etudiant e: es.findAll()){
+            System.out.println("   " + e.getNom());
+        }
+        System.out.println("");
+        System.out.println("Reclamation : ");
+        for(Reclamation r : rs.findAll()){
+            System.out.println("   " + r.getObjet());
+        }
+        System.out.println("");
+        System.out.println("TraitementReclamation : ");
+
         
     }
 

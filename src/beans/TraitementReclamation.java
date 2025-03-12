@@ -10,17 +10,18 @@ package beans;
  * @author hp
  */
 public class TraitementReclamation {
+
     private EStatut statut;
     private String commentaire;
     private Reclamation reclamation;
+    private Etudiant etudiant;
 
-    public TraitementReclamation(EStatut statut, String commentaire, Reclamation reclamation) {
+    public TraitementReclamation(EStatut statut, String commentaire, Reclamation reclamation, Etudiant etudiant) {
         this.statut = statut;
         this.commentaire = commentaire;
         this.reclamation = reclamation;
-    }  
-
-
+        this.etudiant = etudiant;
+    }
 
     public EStatut getStatut() {
         return statut;
@@ -46,9 +47,12 @@ public class TraitementReclamation {
         this.reclamation = reclamation;
     }
 
-    
-  
+    public Etudiant getEtudiant() {
+        return etudiant;
+    }
 
-    
-    
+    public void setEtudiant(Etudiant etudiant) {
+        this.etudiant = etudiant;
+    }
+
 }
