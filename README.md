@@ -32,7 +32,7 @@ L'objectif de ce projet est de concevoir une application qui facilite la gestion
 - Graphique en *Pie Chart* pour analyser la répartition des réclamations traitées et non traitées.
 
 
-``sql
+```sql
 CREATE TABLE Etudiant (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50) NOT NULL,
@@ -56,4 +56,4 @@ CREATE TABLE TraitementReclamation (
     FOREIGN KEY (reclamation_id) REFERENCES Reclamation(id) ON DELETE CASCADE,
     FOREIGN KEY (etudiant_id) REFERENCES Etudiant(id) ON DELETE CASCADE
 );
-sql``
+```
