@@ -56,4 +56,8 @@ CREATE TABLE TraitementReclamation (
     FOREIGN KEY (reclamation_id) REFERENCES Reclamation(id) ON DELETE CASCADE,
     FOREIGN KEY (etudiant_id) REFERENCES Etudiant(id) ON DELETE CASCADE
 );
+CREATE TABLE User (
+    login VARCHAR(50) PRIMARY KEY,
+    password CHAR(32) NOT NULL
+);
 ```
