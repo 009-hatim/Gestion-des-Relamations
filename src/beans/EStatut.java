@@ -1,6 +1,7 @@
 package beans;
 
 public enum EStatut {
-    TRAITEE, 
+
+    TRAITEE,
     NON_TRAITEE
 }

@@ -23,6 +23,10 @@ public class TraitementReclamation {
         this.etudiant = etudiant;
     }
 
+//    public TraitementReclamation(Etudiant etudiant, Reclamation reclamation, String string, String string0) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+
     public EStatut getStatut() {
         return statut;
     }

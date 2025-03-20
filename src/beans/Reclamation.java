@@ -12,6 +12,7 @@ import java.util.Date;
  * @author hp
  */
 public class Reclamation {
+
     private int id;
     private String objet;
     private String description;
@@ -29,8 +30,6 @@ public class Reclamation {
         this.description = description;
         this.date = date;
     }
-
-        
 
     public int getId() {
         return id;
@@ -64,7 +63,9 @@ public class Reclamation {
         this.date = date;
     }
 
-   
+    @Override
+    public String toString() {
+        return  objet ;
+    }
 
-    
 }
