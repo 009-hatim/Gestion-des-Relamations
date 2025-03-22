@@ -71,6 +71,8 @@ CREATE TABLE TraitementReclamation (
 CREATE TABLE User (
     login VARCHAR(50) PRIMARY KEY,
     password CHAR(32) NOT NULL
+    question_securite VARCHAR(255),
+    reponse_securite VARCHAR(255)
 );
 ```
 ## Technologies Utilisées:
@@ -83,6 +85,14 @@ CREATE TABLE User (
 - **phpMyAdmin** : Interface web pour l'administration MySQL.
 - **MagicDraw** : Outil de modélisation UML.
 - **JDBC** : API pour la connexion à la base de données MySQL.
+
+# Reclamations
+
+## Structure du projet
+Reclamations/ │ ├── beans/ # Modèles de données (JavaBeans) │ ├── EStatut.java │ ├── Etudiant.java │ ├── Reclamation.java │ ├── TraitementReclamation.java │ ├── User.java │ ├── connexion/ # Connexion à la base de données │ ├── Connexion.java │ ├── dao/ # Interfaces DAO │ ├── IDao.java │ ├── IUserDao.java │ ├── gui/ # Interface utilisateur (Swing) │ ├── EtudiantByStatut.java │ ├── EtudiantForm.java │ ├── Graph.java │ ├── MDIApplication.java │ ├── Main.java │ ├── ReclamationForm.java │ ├── SearchEtudiant.java │ ├── TraitementReclamationForm.java │ ├── image/ # Ressources images │ ├── lib/ # Bibliothèques externes │ ├── jcalendar-1.4.jar │ ├── jcommon-1.0.23.jar │ ├── jfreechart-1.0.19.jar │ ├── reclamations/ # Gestion des réclamations │ ├── services/ # Couche service (logique métier) │ ├── EtudiantService.java │ ├── ReclamationService.java │ ├── TraitementReclamationService.java │ ├── UserService.java │ ├── test/ # Tests unitaires │ ├── Test.java │ ├── utils/ # Classes utilitaires │ ├── SecurityUtil.java │ └── Libraries/ # Dépendances ├── MySQL JDBC Driver - mysql-connector-java-5 ├── jcalendar-1.4.jar ├── Absolute Layout - AbsoluteLayout.iar
+
+
+
 
 ## Vidéo Démonstrative
 https://github.com/user-attachments/assets/c4509f34-b153-4678-9e5b-3c049f3e7649
