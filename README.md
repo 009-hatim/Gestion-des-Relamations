@@ -4,6 +4,11 @@
 La gestion des réclamations est un enjeu majeur pour les institutions académiques. Un suivi efficace des réclamations permet d'améliorer la communication entre les étudiants et l'administration, garantissant ainsi une meilleure prise en charge des demandes et une résolution rapide des problèmes. Un système manuel ou mal structuré peut entraîner des retards, un manque de transparence et une frustration des étudiants.
 
 ---
+## Problématique
+Les institutions académiques font face à des défis majeurs dans la gestion des réclamations des étudiants. Un système inefficace ou manuel peut entraîner des délais de traitement excessifs, un manque de transparence et une insatisfaction croissante des étudiants. En l'absence d'un outil structuré, l'administration peut rencontrer des difficultés à suivre l'évolution des réclamations, ce qui peut provoquer :
+- *Une perte de temps due à un suivi désorganisé.*
+- *Un manque de transparence dans le traitement des réclamations, entraînant une frustration des étudiants.*
+- *Une difficulté à identifier les tendances et à améliorer les services en fonction des plaintes récurrentes.*
 
 ## Objectif
 L'objectif de ce projet est de concevoir une application qui facilite la gestion des réclamations en permettant un suivi précis et efficace. L'application doit :
