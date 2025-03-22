@@ -68,6 +68,8 @@ CREATE TABLE User (
 ## *Diagrammes UML*
 ### Diagramme de Classe
 ![reclamation](https://github.com/user-attachments/assets/cf8da53b-1eea-4c2d-8090-d44ea7126498)
+ ### Diagramme de Cas d'Utilisation
+
 
 ###  *Vidéo Démonstrative*
 https://github.com/user-attachments/assets/c4509f34-b153-4678-9e5b-3c049f3e7649
