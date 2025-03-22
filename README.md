@@ -73,6 +73,16 @@ CREATE TABLE User (
     password CHAR(32) NOT NULL
 );
 ```
+## Technologies Utilisées:
+- **NetBeans 8.0.2** : IDE pour la programmation Java.
+- **MySQL** : SGBD pour la gestion des réclamations et étudiants.
+- **MySQL Connector/J** : Pilote JDBC pour l'interaction Java-MySQL.
+- **Swing** : Bibliothèque pour les interfaces graphiques.
+- **JCalendar** : Composant pour la gestion des dates.
+- **JFreeChart** : Bibliothèque pour les graphiques (Pie Chart).
+- **phpMyAdmin** : Interface web pour l'administration MySQL.
+- **MagicDraw** : Outil de modélisation UML.
+- **JDBC** : API pour la connexion à la base de données MySQL.
 
 ## Vidéo Démonstrative
 https://github.com/user-attachments/assets/c4509f34-b153-4678-9e5b-3c049f3e7649
