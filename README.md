@@ -30,8 +30,6 @@ L'objectif de ce projet est de concevoir une application qui facilite la gestion
 
 ###  *Visualisation des Données*
 - Graphique en *Pie Chart* pour analyser la répartition des réclamations traitées et non traitées.
-## *Diagrammes UML
-### Diagramme de Cas d'Utilisation
 
 ```sql
 CREATE TABLE Etudiant (
@@ -62,5 +60,9 @@ CREATE TABLE User (
     password CHAR(32) NOT NULL
 );
 ```
+## *Diagrammes UML*
+### Diagramme de Classe
+![reclamation](https://github.com/user-attachments/assets/cf8da53b-1eea-4c2d-8090-d44ea7126498)
+
 ###  *Vidéo Démonstrative*
 https://github.com/user-attachments/assets/c4509f34-b153-4678-9e5b-3c049f3e7649
