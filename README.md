@@ -139,10 +139,7 @@ Reclamations/
 ├── utils/                         # Classes utilitaires
 │   ├── SecurityUtil.java
 │
-└── Libraries/                     # Dépendances
-    ├── MySQL JDBC Driver - mysql-connector-java-5
-    ├── jcalendar-1.4.jar
-    ├── Absolute Layout - AbsoluteLayout.iar
+└── README.md /                     # Documentation du projet
 ```
 
 
