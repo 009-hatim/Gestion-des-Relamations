@@ -72,8 +72,8 @@ public class ReclamationForm extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
 
-        jPanel1.setBackground(new java.awt.Color(230, 216, 230));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestion des Réclamations", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(255, 210, 200));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestion des Réclamations", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18), java.awt.Color.darkGray)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel1.setText("Objet :");
@@ -90,8 +90,8 @@ public class ReclamationForm extends javax.swing.JInternalFrame {
             }
         });
 
-        bnAdd.setBackground(new java.awt.Color(51, 255, 102));
-        bnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        bnAdd.setBackground(new java.awt.Color(144, 238, 144));
+        bnAdd.setForeground(new java.awt.Color(0, 100, 0));
         bnAdd.setText("Ajouter");
         bnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,7 +99,7 @@ public class ReclamationForm extends javax.swing.JInternalFrame {
             }
         });
 
-        bnDelete.setBackground(new java.awt.Color(255, 51, 51));
+        bnDelete.setBackground(new java.awt.Color(255, 105, 97));
         bnDelete.setForeground(new java.awt.Color(255, 255, 255));
         bnDelete.setText("Supprimer");
         bnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +109,7 @@ public class ReclamationForm extends javax.swing.JInternalFrame {
         });
 
         bnUpdate.setBackground(new java.awt.Color(102, 102, 255));
-        bnUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        bnUpdate.setForeground(new java.awt.Color(0, 0, 139));
         bnUpdate.setText("Modifier");
         bnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,8 +160,8 @@ public class ReclamationForm extends javax.swing.JInternalFrame {
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(230, 216, 230));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des reclamation", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18))); // NOI18N
+        jPanel2.setBackground(new java.awt.Color(255, 210, 200));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des reclamation", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18), java.awt.Color.darkGray)); // NOI18N
 
         listeReclamation.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

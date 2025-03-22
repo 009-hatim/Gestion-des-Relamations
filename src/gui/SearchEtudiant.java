@@ -93,14 +93,14 @@ public class SearchEtudiant extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
 
-        jPanel1.setBackground(new java.awt.Color(230, 216, 230));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Recherche des Réclamations par Étudiant", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(255, 210, 200));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Recherche des Réclamations par Étudiant", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18), java.awt.Color.darkGray)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel1.setText("Nom :");
 
-        bnSearche.setBackground(new java.awt.Color(51, 255, 102));
-        bnSearche.setForeground(new java.awt.Color(255, 255, 255));
+        bnSearche.setBackground(new java.awt.Color(144, 238, 144));
+        bnSearche.setForeground(new java.awt.Color(0, 100, 0));
         bnSearche.setText("Rechercher");
         bnSearche.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,8 +132,8 @@ public class SearchEtudiant extends javax.swing.JInternalFrame {
                 .addContainerGap(46, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(230, 216, 230));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des Réclamations par Étudiant", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18))); // NOI18N
+        jPanel2.setBackground(new java.awt.Color(255, 210, 200));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des Réclamations par Étudiant", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18), java.awt.Color.darkGray)); // NOI18N
 
         listeTraitement.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

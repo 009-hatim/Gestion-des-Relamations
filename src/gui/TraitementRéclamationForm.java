@@ -91,8 +91,8 @@ public class TraitementRéclamationForm extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
 
-        jPanel1.setBackground(new java.awt.Color(230, 216, 230));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Traitement des Réclamations", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(255, 210, 200));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Traitement des Réclamations", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18), java.awt.Color.darkGray)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel1.setText("Commentaire :");
@@ -128,8 +128,8 @@ public class TraitementRéclamationForm extends javax.swing.JInternalFrame {
             }
         });
 
-        bnAdd.setBackground(new java.awt.Color(51, 255, 102));
-        bnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        bnAdd.setBackground(new java.awt.Color(144, 238, 144));
+        bnAdd.setForeground(new java.awt.Color(0, 100, 0));
         bnAdd.setText("Ajouter");
         bnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,7 +138,7 @@ public class TraitementRéclamationForm extends javax.swing.JInternalFrame {
         });
 
         bnUpddate.setBackground(new java.awt.Color(102, 102, 255));
-        bnUpddate.setForeground(new java.awt.Color(255, 255, 255));
+        bnUpddate.setForeground(new java.awt.Color(0, 0, 139));
         bnUpddate.setText("Modifier");
         bnUpddate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,8 +213,8 @@ public class TraitementRéclamationForm extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(230, 216, 230));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des Traitement des Réclamations", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18))); // NOI18N
+        jPanel2.setBackground(new java.awt.Color(255, 210, 200));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des Traitement des Réclamations", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18), java.awt.Color.darkGray)); // NOI18N
 
         listeTraitement.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

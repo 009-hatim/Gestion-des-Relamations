@@ -63,6 +63,14 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pasteMenuItemActionPerformed"/>
               </Events>
             </MenuItem>
+            <Menu class="org.jfree.ui.action.ActionMenuItem" name="actionMenuItem1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="pieChart"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="actionMenuItem1ActionPerformed"/>
+              </Events>
+            </Menu>
           </SubComponents>
         </Menu>
       </SubComponents>

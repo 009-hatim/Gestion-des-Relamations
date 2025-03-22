@@ -51,12 +51,13 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="e6" green="d8" red="e6" type="rgb"/>
+          <Color blue="c8" green="d2" red="ff" type="rgb"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder justification="2" title="Gestion des R&#xe9;clamations">
               <Font PropertyName="font" name="Arial" size="18" style="1"/>
+              <Color PropertyName="color" blue="40" green="40" id="darkGray" palette="1" red="40" type="palette"/>
             </TitledBorder>
           </Border>
         </Property>
@@ -151,10 +152,10 @@
         <Component class="javax.swing.JButton" name="bnAdd">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="ff" red="33" type="rgb"/>
+              <Color blue="90" green="ee" red="90" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+              <Color blue="0" green="64" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Ajouter"/>
           </Properties>
@@ -165,7 +166,7 @@
         <Component class="javax.swing.JButton" name="bnDelete">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="33" red="ff" type="rgb"/>
+              <Color blue="61" green="69" red="ff" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -182,7 +183,7 @@
               <Color blue="ff" green="66" red="66" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+              <Color blue="8b" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Modifier"/>
           </Properties>
@@ -195,12 +196,13 @@
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="e6" green="d8" red="e6" type="rgb"/>
+          <Color blue="c8" green="d2" red="ff" type="rgb"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder justification="2" title="Liste des reclamation">
               <Font PropertyName="font" name="Arial" size="18" style="1"/>
+              <Color PropertyName="color" blue="40" green="40" id="darkGray" palette="1" red="40" type="palette"/>
             </TitledBorder>
           </Border>
         </Property>

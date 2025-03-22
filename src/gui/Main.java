@@ -36,78 +36,62 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         txtLogin = new javax.swing.JTextField();
         txtPassword = new javax.swing.JPasswordField();
         bnConnexion = new javax.swing.JButton();
-        bnForget = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(230, 216, 230));
+        jPanel1.setBackground(new java.awt.Color(245, 229, 229));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Authentification"));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("login");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 150, 80, 30));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setText("Mot de passe");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, -1, -1));
-
+        txtLogin.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        txtLogin.setBorder(null);
         txtLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtLoginActionPerformed(evt);
             }
         });
-        jPanel1.add(txtLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 150, 190, 30));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 220, 190, 30));
+        jPanel1.add(txtLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 260, 50));
 
-        bnConnexion.setBackground(new java.awt.Color(102, 102, 255));
+        txtPassword.setBorder(null);
+        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 260, 40));
+
+        bnConnexion.setBackground(new java.awt.Color(202, 22, 59));
         bnConnexion.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         bnConnexion.setForeground(new java.awt.Color(255, 255, 255));
-        bnConnexion.setText("Connexion");
+        bnConnexion.setText("Login");
+        bnConnexion.setBorder(null);
         bnConnexion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bnConnexionActionPerformed(evt);
             }
         });
-        jPanel1.add(bnConnexion, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, 171, 40));
+        jPanel1.add(bnConnexion, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, 140, 50));
 
-        bnForget.setBackground(new java.awt.Color(102, 102, 255));
-        bnForget.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        bnForget.setForeground(new java.awt.Color(255, 255, 255));
-        bnForget.setText("Mote de passe oublier");
-        bnForget.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bnForgetActionPerformed(evt);
+        jLabel1.setForeground(new java.awt.Color(255, 51, 102));
+        jLabel1.setText("Mote de passe oublier");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
             }
         });
-        jPanel1.add(bnForget, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 380, 180, 40));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, -1, 30));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/user.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 890, 550));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/login.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 670, 450));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1002, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 572, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
+        jLabel2.setBackground(new java.awt.Color(255, 153, 153));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Untitled design.jpg"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 980, 520));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 1002, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -131,35 +115,43 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bnConnexionActionPerformed
 
-    private void bnForgetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnForgetActionPerformed
-        // Demander à l'utilisateur de saisir son login
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         String login = JOptionPane.showInputDialog(this, "Veuillez saisir votre login :");
 
         if (login != null && !login.trim().isEmpty()) {
             UserService userService = new UserService();
 
-            // Verifier si le login existe
             if (userService.userExists(login)) {
-                // Demander a l'utilisateur de saisir un nouveau mot de passe
-                String newPassword = JOptionPane.showInputDialog(this, "Veuillez saisir votre nouveau mot de passe :");
 
-                if (newPassword != null && !newPassword.trim().isEmpty()) {
-                    // Mettre a jour le mot de passe dans la base de donnees
-                    if (userService.updatePassword(login, newPassword)) {
-                        JOptionPane.showMessageDialog(this, "Mot de passe mis à jour avec succès !");
+                String question = userService.getSecurityQuestion(login);
+
+                if (question != null) {
+
+                    String reponse = JOptionPane.showInputDialog(this, "Question de sécurité : " + question + "\nVeuillez entrer votre réponse :");
+
+                    if (reponse != null && userService.verifySecurityQuestion(login, reponse)) {
+
+                        String newPassword = JOptionPane.showInputDialog(this, "Entrez votre nouveau mot de passe :");
+
+                        if (newPassword != null && !newPassword.trim().isEmpty()) {
+                            userService.updatePassword(login, newPassword);
+                            JOptionPane.showMessageDialog(this, "Mot de passe réinitialisé avec succès !");
+                        } else {
+                            JOptionPane.showMessageDialog(this, "Le mot de passe ne peut pas être vide.");
+                        }
                     } else {
-                        JOptionPane.showMessageDialog(this, "Erreur lors de la mise à jour du mot de passe.");
+                        JOptionPane.showMessageDialog(this, "Réponse incorrecte !");
                     }
                 } else {
-                    JOptionPane.showMessageDialog(this, "Le mot de passe ne peut pas être vide.");
+                    JOptionPane.showMessageDialog(this, "Aucune question de sécurité enregistrée pour cet utilisateur.");
                 }
             } else {
                 JOptionPane.showMessageDialog(this, "Login introuvable.");
             }
         } else {
             JOptionPane.showMessageDialog(this, "Le login ne peut pas être vide.");
-        }
-    }//GEN-LAST:event_bnForgetActionPerformed
+    }
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -198,10 +190,9 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bnConnexion;
-    private javax.swing.JButton bnForget;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtLogin;
     private javax.swing.JPasswordField txtPassword;

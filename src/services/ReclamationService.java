@@ -5,6 +5,7 @@
  */
 package services;
 
+import beans.EStatut;
 import beans.Etudiant;
 import beans.Reclamation;
 import connexion.Connexion;

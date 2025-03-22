@@ -109,31 +109,46 @@ public class TraitementReclamationService implements IDao<TraitementReclamation>
     }
 
     public List<TraitementReclamation> findByEtudiant(Etudiant etudiant) {
-    List<TraitementReclamation> resultList = new ArrayList<>();
-    String req = "SELECT * FROM TraitementReclamation WHERE etudiant_id = ?";
-    try {
-        PreparedStatement ps = connexion.getCn().prepareStatement(req);
-        ps.setInt(1, etudiant.getId());
-        ResultSet rs = ps.executeQuery();
+        List<TraitementReclamation> resultList = new ArrayList<>();
+        String req = "SELECT * FROM TraitementReclamation WHERE etudiant_id = ?";
+        try {
+            PreparedStatement ps = connexion.getCn().prepareStatement(req);
+            ps.setInt(1, etudiant.getId());
+            ResultSet rs = ps.executeQuery();
 
-        ReclamationService reclamationService = new ReclamationService();
+            ReclamationService reclamationService = new ReclamationService();
 
-        while (rs.next()) {
-            int reclamationId = rs.getInt("reclamation_id");
+            while (rs.next()) {
+                int reclamationId = rs.getInt("reclamation_id");
 
-            Reclamation reclamation = reclamationService.findById(reclamationId);
+                Reclamation reclamation = reclamationService.findById(reclamationId);
 
-            EStatut statut = EStatut.valueOf(rs.getString("statut").toUpperCase());
+                EStatut statut = EStatut.valueOf(rs.getString("statut").toUpperCase());
 
-            TraitementReclamation traitement = new TraitementReclamation(statut, rs.getString("commentaire"), reclamation, etudiant);
+                TraitementReclamation traitement = new TraitementReclamation(statut, rs.getString("commentaire"), reclamation, etudiant);
 
-            resultList.add(traitement);
+                resultList.add(traitement);
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error: " + ex.getMessage());
         }
-    } catch (SQLException ex) {
-        System.out.println("Error: " + ex.getMessage());
+        return resultList;
     }
-    return resultList;
-}
 
+    public int countByStatut(EStatut statut) {
+        int count = 0;
+        String req = "SELECT COUNT(*) FROM TraitementReclamation WHERE statut = ?";
+        try {
+            PreparedStatement ps = connexion.getCn().prepareStatement(req);
+            ps.setString(1, statut.toString());
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                count = rs.getInt(1);
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error: " + ex.getMessage());
+        }
+        return count;
+    }
 
 }

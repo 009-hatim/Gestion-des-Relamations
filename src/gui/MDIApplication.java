@@ -51,6 +51,7 @@ public class MDIApplication extends javax.swing.JFrame {
         editMenu = new javax.swing.JMenu();
         listEtudiantByStatut = new javax.swing.JMenuItem();
         pasteMenuItem = new javax.swing.JMenuItem();
+        actionMenuItem1 = new org.jfree.ui.action.ActionMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,6 +107,14 @@ public class MDIApplication extends javax.swing.JFrame {
             }
         });
         editMenu.add(pasteMenuItem);
+
+        actionMenuItem1.setText("pieChart");
+        actionMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                actionMenuItem1ActionPerformed(evt);
+            }
+        });
+        editMenu.add(actionMenuItem1);
 
         menuBar.add(editMenu);
 
@@ -167,6 +176,14 @@ public class MDIApplication extends javax.swing.JFrame {
         centerInternalFrame(se);
     }//GEN-LAST:event_pasteMenuItemActionPerformed
 
+    private void actionMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actionMenuItem1ActionPerformed
+        closeAllInternalFrames();
+        Graph g = new Graph();
+        desktopPane.add(g);
+        g.setVisible(true);
+        centerInternalFrame(g);
+    }//GEN-LAST:event_actionMenuItem1ActionPerformed
+
     private void closeAllInternalFrames() {
         for (JInternalFrame frame : desktopPane.getAllFrames()) {
             frame.dispose();
@@ -216,6 +233,7 @@ public class MDIApplication extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem ReclamationeMenuItem;
     private javax.swing.JMenuItem TraitementMenuItem;
+    private org.jfree.ui.action.ActionMenuItem actionMenuItem1;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenuItem etudiantMenuItem;
