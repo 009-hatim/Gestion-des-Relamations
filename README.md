@@ -33,9 +33,17 @@ L'objectif de ce projet est de concevoir une application qui facilite la gestion
 ###  *Recherche de Réclamations*
 - Recherche des réclamations par étudiant.
 
-###  *Visualisation des Données*
-- Graphique en *Pie Chart* pour analyser la répartition des réclamations traitées et non traitées.
 
+## *Diagrammes UML*
+### Diagramme de Classe
+![reclamation](https://github.com/user-attachments/assets/cf8da53b-1eea-4c2d-8090-d44ea7126498)
+ 
+### Diagramme de Cas d'Utilisation
+![1](https://github.com/user-attachments/assets/221883cc-14e9-434a-a7c7-f0f466eebc50)
+
+
+###  *Requêtes sql pour la Base de Données*
+Tables
 ```sql
 CREATE TABLE Etudiant (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -65,13 +73,6 @@ CREATE TABLE User (
     password CHAR(32) NOT NULL
 );
 ```
-## *Diagrammes UML*
-### Diagramme de Classe
-![reclamation](https://github.com/user-attachments/assets/cf8da53b-1eea-4c2d-8090-d44ea7126498)
- 
-### Diagramme de Cas d'Utilisation
-![1](https://github.com/user-attachments/assets/221883cc-14e9-434a-a7c7-f0f466eebc50)
-
 
 ###  *Vidéo Démonstrative*
 https://github.com/user-attachments/assets/c4509f34-b153-4678-9e5b-3c049f3e7649
