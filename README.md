@@ -89,9 +89,62 @@ CREATE TABLE User (
 # Reclamations
 
 ## Structure du projet
+## Structure du projet
+
 ```
-Reclamations/ │ ├── beans/ # Modèles de données (JavaBeans) │ ├── EStatut.java │ ├── Etudiant.java │ ├── Reclamation.java │ ├── TraitementReclamation.java │ ├── User.java │ ├── connexion/ # Connexion à la base de données │ ├── Connexion.java │ ├── dao/ # Interfaces DAO │ ├── IDao.java │ ├── IUserDao.java │ ├── gui/ # Interface utilisateur (Swing) │ ├── EtudiantByStatut.java │ ├── EtudiantForm.java │ ├── Graph.java │ ├── MDIApplication.java │ ├── Main.java │ ├── ReclamationForm.java │ ├── SearchEtudiant.java │ ├── TraitementReclamationForm.java │ ├── image/ # Ressources images │ ├── lib/ # Bibliothèques externes │ ├── jcalendar-1.4.jar │ ├── jcommon-1.0.23.jar │ ├── jfreechart-1.0.19.jar │ ├── reclamations/ # Gestion des réclamations │ ├── services/ # Couche service (logique métier) │ ├── EtudiantService.java │ ├── ReclamationService.java │ ├── TraitementReclamationService.java │ ├── UserService.java │ ├── test/ # Tests unitaires │ ├── Test.java │ ├── utils/ # Classes utilitaires │ ├── SecurityUtil.java │ └── Libraries/ # Dépendances ├── MySQL JDBC Driver - mysql-connector-java-5 ├── jcalendar-1.4.jar ├── Absolute Layout - AbsoluteLayout.iar
+Reclamations/
+│
+├── beans/                         # Modèles de données (JavaBeans)
+│   ├── EStatut.java
+│   ├── Etudiant.java
+│   ├── Reclamation.java
+│   ├── TraitementReclamation.java
+│   ├── User.java
+│
+├── connexion/                     # Connexion à la base de données
+│   ├── Connexion.java
+│
+├── dao/                           # Interfaces DAO
+│   ├── IDao.java
+│   ├── IUserDao.java
+│
+├── gui/                           # Interface utilisateur (Swing)
+│   ├── EtudiantByStatut.java
+│   ├── EtudiantForm.java
+│   ├── Graph.java
+│   ├── MDIApplication.java
+│   ├── Main.java
+│   ├── ReclamationForm.java
+│   ├── SearchEtudiant.java
+│   ├── TraitementReclamationForm.java
+│
+├── image/                         # Ressources images
+│
+├── lib/                           # Bibliothèques externes
+│   ├── jcalendar-1.4.jar
+│   ├── jcommon-1.0.23.jar
+│   ├── jfreechart-1.0.19.jar
+│
+├── reclamations/                  # Gestion des réclamations
+│
+├── services/                      # Couche service (logique métier)
+│   ├── EtudiantService.java
+│   ├── ReclamationService.java
+│   ├── TraitementReclamationService.java
+│   ├── UserService.java
+│
+├── test/                          # Tests unitaires
+│   ├── Test.java
+│
+├── utils/                         # Classes utilitaires
+│   ├── SecurityUtil.java
+│
+└── Libraries/                     # Dépendances
+    ├── MySQL JDBC Driver - mysql-connector-java-5
+    ├── jcalendar-1.4.jar
+    ├── Absolute Layout - AbsoluteLayout.iar
 ```
+
 
 
 
