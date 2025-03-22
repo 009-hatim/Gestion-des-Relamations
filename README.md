@@ -30,7 +30,8 @@ L'objectif de ce projet est de concevoir une application qui facilite la gestion
 
 ###  *Visualisation des Données*
 - Graphique en *Pie Chart* pour analyser la répartition des réclamations traitées et non traitées.
-
+## *Diagrammes UML
+### Diagramme de Cas d'Utilisation
 
 ```sql
 CREATE TABLE Etudiant (
