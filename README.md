@@ -89,7 +89,6 @@ CREATE TABLE User (
 # Reclamations
 
 ## Structure du projet
-## Structure du projet
 
 ```
 Reclamations/
