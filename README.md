@@ -42,7 +42,7 @@ L'objectif de ce projet est de concevoir une application qui facilite la gestion
 ![1](https://github.com/user-attachments/assets/221883cc-14e9-434a-a7c7-f0f466eebc50)
 
 
-###  Requêtes sql pour la Base de Données
+## Requêtes sql pour la Base de Données
 Tables
 ```sql
 CREATE TABLE Etudiant (
