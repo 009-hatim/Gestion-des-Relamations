@@ -40,7 +40,8 @@ Ce projet vise à concevoir une application facilitant la gestion des réclamati
 
 ## 📌 Diagrammes UML  
 ### 🎯 **Diagramme de Classe**  
-![reclamation](https://github.com/user-attachments/assets/cf8da53b-1eea-4c2d-8090-d44ea7126498)  
+![ges-recl](https://github.com/user-attachments/assets/f5ae2ed5-ba1c-438f-bd96-f599365923b5)
+
 
 ### 🎯 **Diagramme de Cas d’Utilisation**  
 ![1](https://github.com/user-attachments/assets/221883cc-14e9-434a-a7c7-f0f466eebc50)  
