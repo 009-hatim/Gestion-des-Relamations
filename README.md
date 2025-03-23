@@ -88,10 +88,10 @@ CREATE TABLE User (
 - **JDBC** : API pour la connexion à la base de données MySQL.
 ---
 ## Architecture du Projet
-
+![Presentation Layer](https://github.com/user-attachments/assets/78ef851d-2bdc-4d32-ab79-63bc572ab1ac)
+---
 # Reclamations
 ## Structure du projet
-![Presentation Layer](https://github.com/user-attachments/assets/78ef851d-2bdc-4d32-ab79-63bc572ab1ac)
 
 ```
 Reclamations/
