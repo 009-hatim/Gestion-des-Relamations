@@ -5,10 +5,18 @@
  */
 package gui;
 
+import java.util.Properties;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import services.UserService;
-
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 /**
  *
  * @author hp
@@ -82,7 +90,7 @@ public class Main extends javax.swing.JFrame {
                 jLabel1MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, -1, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, -1, 30));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/login.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 670, 450));
@@ -116,41 +124,66 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_bnConnexionActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        String login = JOptionPane.showInputDialog(this, "Veuillez saisir votre login :");
+        String login = txtLogin.getText().trim();
+        UserService userService = new UserService();
 
-        if (login != null && !login.trim().isEmpty()) {
-            UserService userService = new UserService();
+        String email = JOptionPane.showInputDialog(this, "Entrez votre adresse email");
 
-            if (userService.userExists(login)) {
+        if (userService.userExists(login) && email != null && !email.isEmpty()) {
 
-                String question = userService.getSecurityQuestion(login);
+            String reponseSecrete = JOptionPane.showInputDialog(this, "Quelle est le nom de votre animal ?");
+            String bonneReponse = "rex";
 
-                if (question != null) {
+            if (reponseSecrete != null && reponseSecrete.trim().equalsIgnoreCase(bonneReponse)) {
 
-                    String reponse = JOptionPane.showInputDialog(this, "Question de sécurité : " + question + "\nVeuillez entrer votre réponse :");
+                String nouveauMotDePasse = JOptionPane.showInputDialog(this, "Entrez votre nouveau mot de passe");
 
-                    if (reponse != null && userService.verifySecurityQuestion(login, reponse)) {
+                if (nouveauMotDePasse != null && !nouveauMotDePasse.trim().isEmpty()) {
+                    boolean result = userService.changerMotDePasse(login, nouveauMotDePasse);
 
-                        String newPassword = JOptionPane.showInputDialog(this, "Entrez votre nouveau mot de passe :");
+                    Properties properties = new Properties();
+                    properties.put("mail.smtp.host", "smtp.gmail.com");
+                    properties.put("mail.smtp.port", "587");
+                    properties.put("mail.smtp.starttls.enable", "true");
+                    properties.put("mail.smtp.auth", "true");
 
-                        if (newPassword != null && !newPassword.trim().isEmpty()) {
-                            userService.updatePassword(login, newPassword);
-                            JOptionPane.showMessageDialog(this, "Mot de passe réinitialisé avec succès !");
-                        } else {
-                            JOptionPane.showMessageDialog(this, "Le mot de passe ne peut pas être vide.");
+                    Session session = Session.getInstance(properties, new Authenticator() {
+                        @Override
+                        protected PasswordAuthentication getPasswordAuthentication() {
+                            return new PasswordAuthentication("h.koubri2436@uca.ac.ma", "sges xoqe pwlo usgo");
                         }
-                    } else {
-                        JOptionPane.showMessageDialog(this, "Réponse incorrecte !");
+                    });
+                    try {
+
+                        Message message = new MimeMessage(session);
+                        message.setFrom(new InternetAddress("h.koubri2436@uca.ac.ma"));
+                        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
+                        message.setSubject("Récupération de mot de passe");
+                        String messageContent = "Bonjour "+login+" ,\n\nVotre nouveau mot de passe est : " + nouveauMotDePasse;
+                        message.setText(messageContent);
+
+                        Transport.send(message);
+
+                        if (result) {
+                            JOptionPane.showMessageDialog(this, "Mot de passe changé avec succès !");
+                            JOptionPane.showMessageDialog(this, "Votre nouveau mot de passe a été envoyé à votre adresse email.");
+                        } else {
+                            JOptionPane.showMessageDialog(this, "Échec du changement de mot de passe.");
+                        }
+
+                    } catch (MessagingException e) {
+                        e.printStackTrace();
+                        JOptionPane.showMessageDialog(this, "Échec de l'envoi du mot de passe. Vérifiez l'adresse email.");
                     }
                 } else {
-                    JOptionPane.showMessageDialog(this, "Aucune question de sécurité enregistrée pour cet utilisateur.");
+                    JOptionPane.showMessageDialog(this, "Le mot de passe ne peut pas être vide.");
                 }
             } else {
-                JOptionPane.showMessageDialog(this, "Login introuvable.");
+                JOptionPane.showMessageDialog(this, "Réponse incorrecte à la question secrète.");
             }
         } else {
-            JOptionPane.showMessageDialog(this, "Le login ne peut pas être vide.");
-    }
+            JOptionPane.showMessageDialog(this, "L'adresse email ne peut pas être vide ou l'utilisateur est inconnu.");
+        }
     }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
@@ -179,7 +212,7 @@ public class Main extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

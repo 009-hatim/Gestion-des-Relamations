@@ -140,7 +140,7 @@ public class SearchEtudiant extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "Id", "Etudiant", "Reclamation", "Statut", "Commentaire"
+                "Etudiant", "Reclamation", "Statut", "Date"
             }
         ));
         jScrollPane1.setViewportView(listeTraitement);

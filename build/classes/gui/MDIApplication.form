@@ -42,7 +42,7 @@
         <Menu class="javax.swing.JMenu" name="editMenu">
           <Properties>
             <Property name="mnemonic" type="int" value="101"/>
-            <Property name="text" type="java.lang.String" value="Statistiques"/>
+            <Property name="text" type="java.lang.String" value="Recherche"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="listEtudiantByStatut">
@@ -63,15 +63,16 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pasteMenuItemActionPerformed"/>
               </Events>
             </MenuItem>
-            <Menu class="org.jfree.ui.action.ActionMenuItem" name="actionMenuItem1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="pieChart"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="actionMenuItem1ActionPerformed"/>
-              </Events>
-            </Menu>
           </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="actionMenuItem1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Statistiques"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="actionMenuItem1MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="actionMenuItem1ActionPerformed"/>
+          </Events>
         </Menu>
       </SubComponents>
     </Menu>

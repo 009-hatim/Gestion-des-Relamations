@@ -51,7 +51,7 @@ public class MDIApplication extends javax.swing.JFrame {
         editMenu = new javax.swing.JMenu();
         listEtudiantByStatut = new javax.swing.JMenuItem();
         pasteMenuItem = new javax.swing.JMenuItem();
-        actionMenuItem1 = new org.jfree.ui.action.ActionMenuItem();
+        actionMenuItem1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,7 +88,7 @@ public class MDIApplication extends javax.swing.JFrame {
         menuBar.add(gestionMenuItem);
 
         editMenu.setMnemonic('e');
-        editMenu.setText("Statistiques");
+        editMenu.setText("Recherche");
 
         listEtudiantByStatut.setMnemonic('y');
         listEtudiantByStatut.setText("Etudiant par statut");
@@ -108,15 +108,20 @@ public class MDIApplication extends javax.swing.JFrame {
         });
         editMenu.add(pasteMenuItem);
 
-        actionMenuItem1.setText("pieChart");
+        menuBar.add(editMenu);
+
+        actionMenuItem1.setText("Statistiques");
+        actionMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                actionMenuItem1MouseClicked(evt);
+            }
+        });
         actionMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 actionMenuItem1ActionPerformed(evt);
             }
         });
-        editMenu.add(actionMenuItem1);
-
-        menuBar.add(editMenu);
+        menuBar.add(actionMenuItem1);
 
         setJMenuBar(menuBar);
 
@@ -177,13 +182,18 @@ public class MDIApplication extends javax.swing.JFrame {
     }//GEN-LAST:event_pasteMenuItemActionPerformed
 
     private void actionMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actionMenuItem1ActionPerformed
+       
+    }//GEN-LAST:event_actionMenuItem1ActionPerformed
+
+    private void actionMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionMenuItem1MouseClicked
         closeAllInternalFrames();
         Graph g = new Graph();
         desktopPane.add(g);
         g.setVisible(true);
         centerInternalFrame(g);
-    }//GEN-LAST:event_actionMenuItem1ActionPerformed
+    }//GEN-LAST:event_actionMenuItem1MouseClicked
 
+                               
     private void closeAllInternalFrames() {
         for (JInternalFrame frame : desktopPane.getAllFrames()) {
             frame.dispose();
@@ -233,7 +243,7 @@ public class MDIApplication extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem ReclamationeMenuItem;
     private javax.swing.JMenuItem TraitementMenuItem;
-    private org.jfree.ui.action.ActionMenuItem actionMenuItem1;
+    private javax.swing.JMenu actionMenuItem1;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenuItem etudiantMenuItem;

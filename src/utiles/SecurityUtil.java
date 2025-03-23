@@ -3,16 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package utils;
+package utiles;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-/**
- *
- * @author hkoub
- */
 public class SecurityUtil {
+
     public static String hashSHA1(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-1");
