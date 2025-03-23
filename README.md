@@ -1,49 +1,55 @@
-# Gestion des Réclamations
+# 📌 Gestion des Réclamations  
 
-## Contexte
-La gestion des réclamations est un enjeu majeur pour les institutions académiques. Un suivi efficace des réclamations permet d'améliorer la communication entre les étudiants et l'administration, garantissant ainsi une meilleure prise en charge des demandes et une résolution rapide des problèmes. Un système manuel ou mal structuré peut entraîner des retards, un manque de transparence et une frustration des étudiants.
-
----
-## Problématique
-Les institutions académiques font face à des défis majeurs dans la gestion des réclamations des étudiants. Un système inefficace ou manuel peut entraîner des délais de traitement excessifs, un manque de transparence et une insatisfaction croissante des étudiants. En l'absence d'un outil structuré, l'administration peut rencontrer des difficultés à suivre l'évolution des réclamations, ce qui peut provoquer :
-- *Une perte de temps due à un suivi désorganisé.*
-- *Un manque de transparence dans le traitement des réclamations, entraînant une frustration des étudiants.*
-- *Une difficulté à identifier les tendances et à améliorer les services en fonction des plaintes récurrentes.*
+## 📌 Contexte  
+Dans les institutions académiques, la gestion des réclamations des étudiants est un enjeu crucial. Un système efficace garantit une meilleure communication entre les étudiants et l’administration, permettant ainsi un traitement rapide et transparent des demandes. À l’inverse, un processus manuel ou mal structuré entraîne des retards, un manque de transparence et une frustration des étudiants.  
 
 ---
-## Objectif
-L'objectif de ce projet est de concevoir une application qui facilite la gestion des réclamations en permettant un suivi précis et efficace. L'application doit :
 
-- *Permettre l'enregistrement et le suivi des réclamations des étudiants.*
-- *Assurer un traitement clair et structuré des demandes.*
-- *Offrir des outils de filtrage et de recherche pour une gestion optimisée.*
-- *Fournir une visualisation graphique des réclamations traitées et non traitées.*
-
----
-## Fonctionnalités Principales
-###  *Gestion des Réclamations*
-- Enregistrement des réclamations par les étudiants.
-
-###  *Traitement des Réclamations*
-- Mise à jour du statut et ajout de commentaires sur chaque réclamation.
-
-###  *Filtrage des Réclamations*
-- Filtrage par statut (traitée ou non traitée).
-
-###  *Recherche de Réclamations*
-- Recherche des réclamations par étudiant.
+## 📌 Problématique  
+Les établissements d'enseignement rencontrent plusieurs défis liés à la gestion des réclamations des étudiants. Un système inefficace peut engendrer :  
+- ⏳ **Des délais de traitement excessifs**, causés par un suivi désorganisé.  
+- ❌ **Un manque de transparence**, entraînant une frustration croissante des étudiants.  
+- 📉 **Des difficultés d’analyse des tendances**, limitant l’amélioration des services en fonction des plaintes récurrentes.  
 
 ---
-## Diagrammes UML
-### *Diagramme de Classe*
-![reclamation](https://github.com/user-attachments/assets/cf8da53b-1eea-4c2d-8090-d44ea7126498)
- 
-### *Diagramme de Cas d'Utilisation*
-![1](https://github.com/user-attachments/assets/221883cc-14e9-434a-a7c7-f0f466eebc50)
+
+## 📌 Objectif  
+Ce projet vise à concevoir une application facilitant la gestion des réclamations en offrant un suivi structuré et efficace. L’application doit :  
+✅ **Permettre l’enregistrement et le suivi des réclamations des étudiants.**  
+✅ **Assurer un traitement clair et organisé des demandes.**  
+✅ **Offrir des outils de recherche et de filtrage pour une gestion optimisée.**  
+✅ **Fournir une visualisation graphique de la répartition des réclamations traitées et non traitées.**  
 
 ---
-## Requêtes sql pour la Base de Données
-Tables
+
+## 📌 Fonctionnalités  
+
+### 📍 **Gestion des Réclamations**  
+✔️ Enregistrement des réclamations par les étudiants.  
+
+### 📍 **Traitement des Réclamations**  
+✔️ Mise à jour du statut et ajout de commentaires sur chaque réclamation.  
+
+### 📍 **Filtrage des Réclamations**  
+✔️ Filtrage par statut (traitée ou non traitée).  
+
+### 📍 **Recherche des Réclamations**  
+✔️ Recherche des réclamations par étudiant.  
+
+---
+
+## 📌 Diagrammes UML  
+### 🎯 **Diagramme de Classe**  
+![reclamation](https://github.com/user-attachments/assets/cf8da53b-1eea-4c2d-8090-d44ea7126498)  
+
+### 🎯 **Diagramme de Cas d’Utilisation**  
+![1](https://github.com/user-attachments/assets/221883cc-14e9-434a-a7c7-f0f466eebc50)  
+
+---
+
+## 📌 Base de Données  
+
+### 🗄️ **Modélisation des Tables**  
 ```sql
 CREATE TABLE Etudiant (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -66,34 +72,26 @@ CREATE TABLE TraitementReclamation (
     etudiant_id INT NOT NULL,
     PRIMARY KEY (reclamation_id, etudiant_id),
     FOREIGN KEY (reclamation_id) REFERENCES Reclamation(id) ON DELETE CASCADE,
-    FOREIGN KEY (etudiant_id) REFERENCES Etudiant(id) ON DELETE CASCADE
+    FOREIGN KEY (etudiant_id) REFERENCES Etudiant(id) ON DELETE CASCADE
 );
+
 CREATE TABLE User (
     login VARCHAR(50) PRIMARY KEY,
-    password CHAR(32) NOT NULL
+    password CHAR(32) NOT NULL,
     question_securite VARCHAR(255),
     reponse_securite VARCHAR(255)
 );
 ```
 ---
-## Technologies Utilisées:
-- **NetBeans 8.0.2** : IDE pour la programmation Java.
-- **MySQL** : SGBD pour la gestion des réclamations et étudiants.
-- **MySQL Connector/J** : Pilote JDBC pour l'interaction Java-MySQL.
-- **Swing** : Bibliothèque pour les interfaces graphiques.
-- **JCalendar** : Composant pour la gestion des dates.
-- **JFreeChart** : Bibliothèque pour les graphiques (Pie Chart).
-- **phpMyAdmin** : Interface web pour l'administration MySQL.
-- **MagicDraw** : Outil de modélisation UML.
-- **JDBC** : API pour la connexion à la base de données MySQL.
----
-## Architecture du Projet
-![Presentation Layer](https://github.com/user-attachments/assets/78ef851d-2bdc-4d32-ab79-63bc572ab1ac)
----
-# Reclamations
-## Structure du projet
 
-```
+## 📌 Architecture du Projet  
+![Architecture](https://github.com/user-attachments/assets/78ef851d-2bdc-4d32-ab79-63bc572ab1ac)  
+
+---
+
+## 📌 Structure du Projet  
+
+```bash
 Reclamations/
 │
 ├── beans/                         # Modèles de données (JavaBeans)
@@ -103,7 +101,7 @@ Reclamations/
 │   ├── TraitementReclamation.java
 │   ├── User.java
 │
-├── connexion/                     # Connexion à la base de données
+├── connexion/                     # Gestion de la connexion à la BDD
 │   ├── Connexion.java
 │
 ├── dao/                           # Interfaces DAO
@@ -141,10 +139,7 @@ Reclamations/
 ├── utils/                         # Classes utilitaires
 │   ├── SecurityUtil.java
 │
-└── README.md /                     # Documentation du projet
-```
-
-
+└── README.md                      # Documentation du projet
 
 
 ## Vidéo Démonstrative
