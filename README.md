@@ -10,6 +10,7 @@ Les institutions académiques font face à des défis majeurs dans la gestion de
 - *Un manque de transparence dans le traitement des réclamations, entraînant une frustration des étudiants.*
 - *Une difficulté à identifier les tendances et à améliorer les services en fonction des plaintes récurrentes.*
 
+---
 ## Objectif
 L'objectif de ce projet est de concevoir une application qui facilite la gestion des réclamations en permettant un suivi précis et efficace. L'application doit :
 
@@ -19,7 +20,6 @@ L'objectif de ce projet est de concevoir une application qui facilite la gestion
 - *Fournir une visualisation graphique des réclamations traitées et non traitées.*
 
 ---
-
 ## Fonctionnalités Principales
 ###  *Gestion des Réclamations*
 - Enregistrement des réclamations par les étudiants.
@@ -33,7 +33,7 @@ L'objectif de ce projet est de concevoir une application qui facilite la gestion
 ###  *Recherche de Réclamations*
 - Recherche des réclamations par étudiant.
 
-
+---
 ## Diagrammes UML
 ### *Diagramme de Classe*
 ![reclamation](https://github.com/user-attachments/assets/cf8da53b-1eea-4c2d-8090-d44ea7126498)
@@ -41,7 +41,7 @@ L'objectif de ce projet est de concevoir une application qui facilite la gestion
 ### *Diagramme de Cas d'Utilisation*
 ![1](https://github.com/user-attachments/assets/221883cc-14e9-434a-a7c7-f0f466eebc50)
 
-
+---
 ## Requêtes sql pour la Base de Données
 Tables
 ```sql
@@ -75,6 +75,7 @@ CREATE TABLE User (
     reponse_securite VARCHAR(255)
 );
 ```
+---
 ## Technologies Utilisées:
 - **NetBeans 8.0.2** : IDE pour la programmation Java.
 - **MySQL** : SGBD pour la gestion des réclamations et étudiants.
@@ -85,10 +86,12 @@ CREATE TABLE User (
 - **phpMyAdmin** : Interface web pour l'administration MySQL.
 - **MagicDraw** : Outil de modélisation UML.
 - **JDBC** : API pour la connexion à la base de données MySQL.
+---
+## Architecture du Projet
 
 # Reclamations
-
 ## Structure du projet
+![Presentation Layer](https://github.com/user-attachments/assets/78ef851d-2bdc-4d32-ab79-63bc572ab1ac)
 
 ```
 Reclamations/
